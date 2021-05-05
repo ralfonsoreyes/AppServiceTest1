@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     # checkout the repo
@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: RubenAppServiceTest1
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6E71E72DBFB9421AB5AB472663E9E137 }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A893CA5425204B8EAB97DA9DF594F90B }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
